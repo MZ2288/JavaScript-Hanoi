@@ -3,6 +3,8 @@ function Clock () {
   this.hours = newDate.getHours();
   this.minutes = newDate.getMinutes();
   this.seconds = newDate.getSeconds();
+  var that = this;
+  setInterval(this._tick.bind(this), 1000);
 }
 
 Clock.prototype.printTime = function () {
